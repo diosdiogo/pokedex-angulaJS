@@ -1,0 +1,88 @@
+.toolbar-top{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #020202;
+}
+.user{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 44px;
+    color: rgba(255, 255, 255, 0.87);
+    width: 200px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-titulo{
+    display: flex;
+    flex-direction: column;
+}
+.titulo{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 44px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.subtitulo{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 44px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.busca{
+    width: 260px;
+}
+.input-search{
+    border-right: none !important;
+}
+.btn-input-search{
+    border: 1px solid #ced4da;
+    border-left: none;
+}
+
+@media screen and (max-width: 685px) {
+    .logo img{
+        width: 130px;
+    }
+    .user{
+        width: 150px;
+        font-size: 16px;
+    }
+    .header{
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulo{
+        font-size: 20px;
+        padding: 0;
+    }
+    .subtitulo{
+        font-size: 16px;
+        text-align: center;
+        padding: 0;
+    }
+  }
