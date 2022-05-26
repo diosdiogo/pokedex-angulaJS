@@ -66,13 +66,17 @@ app.controller('pokedexController', ['$scope', '$rootScope', '$location', '$http
             return
         }
         apiService.pokemonBuscar($scope.busca, (data)=>{
-            debugger
-            if(data.isValid){
-                $scope.pokemon = data.data;
-                $scope.listaPokemon = data.data.data.results
-                $scope.pageTotal = 1
-                console.log($scope.pokemon)
+            if(!data.isValid){
+                Swal.fire({
+                    position: 'center',
+                    icon: 'warning',
+                    title: 'Pokemon não encontrado',
+                    showConfirmButton: "warning",
+                })
             }
+            $scope.pokemon = data.data;
+            $scope.listaPokemon = data.data.data.results
+            $scope.pageTotal = 1
         })
     }
     init()

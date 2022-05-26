@@ -35,6 +35,10 @@ app.service('apiService', ['$http', function($http) {
         var response = $http(req);
         
         response.then((data)=> {
+            if(data.data == undefined){
+                callback({ isValid: false, msg: "Pokemon não encontrado" })
+                return
+            }
             resp ={
                 data:{
                     count: 1,
