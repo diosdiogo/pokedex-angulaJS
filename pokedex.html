@@ -7,7 +7,7 @@
 
         <div class="busca">
             <div class="input-group mb-3">
-                <input type="text" ng-model="busca" class="form-control input-search" placeholder="Buscar" aria-label="Buscar" aria-describedby="button-addon2">
+                <input type="text" ng-model="busca" class="form-control input-search" placeholder="Buscar" aria-label="Buscar" ng-enter="buscarPokemon()" aria-describedby="button-addon2">
                 <div class="input-group-append">
                   <button class="btn btn-outline-secondary btn-input-search" type="button" id="button-addon2" ng-click="buscarPokemon()">
                     <i class="fa fa-search"></i>
