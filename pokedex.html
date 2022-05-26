@@ -7,9 +7,9 @@
 
         <div class="busca">
             <div class="input-group mb-3">
-                <input type="text" class="form-control input-search" placeholder="Buscar" aria-label="Buscar" aria-describedby="button-addon2">
+                <input type="text" ng-model="busca" class="form-control input-search" placeholder="Buscar" aria-label="Buscar" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                  <button class="btn btn-outline-secondary btn-input-search" type="button" id="button-addon2">
+                  <button class="btn btn-outline-secondary btn-input-search" type="button" id="button-addon2" ng-click="buscarPokemon()">
                     <i class="fa fa-search"></i>
                   </button>
                 </div>
@@ -18,9 +18,12 @@
     </div>
 
     <div class="content-pokemon">
+        <hr>
+        <span class="totais">Exibindo {{ limit }} de {{ pokemon.data.count }} itens</span>
         <div class="display-pokemon" ng-repeat="p in listaPokemon">
             <div class="img-pokemon">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png" alt="pokemon imagem">
+                <img src= "{{ imagePokemon }}" alt="pokemon imagem" ng-if="!p.img">
+                <img src= "{{ p.img }}" alt="pokemon imagem" ng-if="p.img">
             </div>
             <div class="subject">
                 <div>
@@ -31,6 +34,33 @@
                 </div>
             </div>
             
+        </div>
+    </div>
+    <div class="paginete" ng-if="listaPokemon.length > 0">
+        <div class="page-number">
+            <span>{{ pageInit }} de {{ pageTotal }} paginas</span>
+        </div>
+        <div class="navigate">
+            <button class="btn-navigate" ng-click="nav('fp')">
+                <span class="material-symbols-outlined">
+                    first_page
+                </span>
+            </button>
+            <button class="btn-navigate" ng-click="nav('prev')">
+                <span class="material-symbols-outlined">
+                    chevron_left
+                </span>
+            </button>
+            <button class="btn-navigate" ng-click="nav('next')">
+                <span class="material-symbols-outlined">
+                    chevron_right
+                </span>
+            </button>
+            <button class="btn-navigate" ng-click="nav('lp')">
+                <span class="material-symbols-outlined">
+                    last_page
+                </span>
+            </button>
         </div>
     </div>
 </div>
