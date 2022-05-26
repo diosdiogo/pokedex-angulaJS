@@ -16,5 +16,21 @@
             </div>
         </div>
     </div>
-    <hr>
+
+    <div class="content-pokemon">
+        <div class="display-pokemon" ng-repeat="p in listaPokemon">
+            <div class="img-pokemon">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png" alt="pokemon imagem">
+            </div>
+            <div class="subject">
+                <div>
+                    <span class="nome-pokemon">{{ p.name }}</span>
+                </div>
+                <div>
+                    <span class="caracteristicas">Características do pokemon dolor sit amet, consectetur adipiscing elit. In ultricies nunc at odio tempor tincidunt. Sed sit amet dolor velit. Donec convallis tellus ut porta molestie. Suspendisse condimentum et dui in aliquam.</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 </div>
